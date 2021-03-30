@@ -33,6 +33,10 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int lengthOfLastWord(String s) {
+        String[] ss = s.split(" ");
+        int n = ss.length;
+        if (n == 0) return 0;
+        return ss[n - 1].length();
 
     }
 }

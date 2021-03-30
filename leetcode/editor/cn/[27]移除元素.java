@@ -61,7 +61,12 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int removeElement(int[] nums, int val) {
-
+        int slow = 0, fast = nums.length - 1;
+        while (slow <= fast) {
+            if (nums[slow] == val) nums[slow] = nums[fast--];
+            else slow++;
+        }
+        return fast + 1;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
